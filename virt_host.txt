@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+DocumentRoot /var/www/my-site/
+ServerName www.mit.edu/~dyanez.tld
+ServerAlias diegos-portfolio.tld
+DirectoryIndex work.html
+ErrorDocument 404 /404error.html
+</VirtualHost>
