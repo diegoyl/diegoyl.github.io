@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;700;900&display=swap');
 :root {
     --main-color: rgb(252, 101, 113);
     --blue-color: #2294c2;
@@ -5,6 +6,7 @@
     --lightblue-color: #8fefff;
     --pink-color: rgb(255, 144, 159);
     --scarlet-color: rgb(158, 16, 71);
+    --dark-gray-color: rgb(111, 112, 112);
     --gray-color: rgb(198, 204, 204);
     --wrapper-width: 1000px;
     --main-col-width: auto;
@@ -18,6 +20,7 @@
 
 
     --containerWidth: 1400px;
+    --navMarginTop: 70px;
 }
   
 .tealColor {
@@ -36,8 +39,7 @@
     color: var(--gray-color);
 }
 
-
-body,p,h1,h2,h3,h4,h5,h6 {font-family: 'Futura', 'Work Sans', serif; font-weight: 400;} /* change to sans-serif when readt */
+body,p,h1,h2,h3,h4,h5,h6 {font-family: 'Epilogue', 'WorkxSans', serif; font-weight: 400;} /* change to sans-serif when readt */
 .extra-light{font-weight: 200;}
 .light{font-weight: 300;}
 .regular{font-weight: 400;}
@@ -52,7 +54,16 @@ body,p,h1,h2,h3,h4,h5,h6 {font-family: 'Futura', 'Work Sans', serif; font-weight
 .font4{font-size: var(--font4);}
 h1 {
     font-weight: 500;
-    font-size: var(--font2);
+    font-size: 3em;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+h2 {
+    margin-top: 0px;
+    color: var(--gray-color);
+    font-size: 1.5em;
+    text-align: center;
 }
 html { font-size: 100%; } /*16px*/
 
@@ -74,9 +85,9 @@ body {
     display: inline-block;
     vertical-align: top;
     position: sticky;
-    top: 0;
-    margin-top: 30px;
-    z-index: 5;
+    top: var(--navMarginTop);
+    margin-top: calc(5% + var(--navMarginTop));
+    z-index: 3;
 }
 #nav {
     /* background-color: #8feeff4b; */
@@ -87,7 +98,7 @@ body {
 }
 #nav-box-mobile {
     display: none;
-}    
+}
 #avatar {
     width: 100%;
     /* padding: 0 10%; */
@@ -104,12 +115,21 @@ body {
     line-height: 1em;
 }
 .nav-item {
-    color: black;
-    font-size: 1em;
+    color: var(--dark-gray-color);
+    font-size: 1.2em;
     display: block;
     text-decoration: none;
     height: 2em;
+    text-align: center;
+} 
+#nav a:hover {
+    text-decoration: underline;
+    color: black;
 }
+.nav-subtitle {
+    margin: 0;
+    font-weight: 500;
+}  
 
 #main {
     width: 78%;
@@ -125,66 +145,33 @@ body {
     display: inline-block;
     vertical-align: top;
 }
-#project-wrapper {
-    text-align: center;
-    /* margin-top: -125px; */
-    width: 100%;
-    margin: auto;
-    font-size: 0;
+.project-content p {
+    font-size: 1.2em; 
 }
-.project-container {
-    display: inline-block;
-    position: relative;
-    /* height: var(--project-dim); */
-    width: 49%;
-    padding-bottom: 49%;
-    margin: 0;
-    padding: 0;
-}
-.project-img {
-    position: absolute;
-    /* height: 500px;     */
+.project-content img {
     display: block;
-    margin-top: 5%;
-    padding: 0;
-    top: 0;
-    object-fit: cover;
-    
+    width: 100%;
 }
-.project-overlay {
-    position: absolute;
-    transition: all .15s ease;
-    opacity: 0;
-    z-index: 2;
-    width: 80%;
-    height: 80%;
-    background-color: var(--blue-color-tr);
-    /* vertical-align: middle; */
-    margin: 0;
-    padding: 0;
+
+#footer {
+    text-align: center;
+    margin-top: 100px;
+    height: 120px;
+    /* background-color: rgb(212, 115, 115); */
 }
-.project-text {
-    margin-top: 128px;
-    color: white;
-    font-size: var(--font2);
+.footer-item {
+    text-decoration: none;
+    color: black;
+    line-height: 0em;
+    font-size: .8em;
     font-weight: 500;
-    padding: 0 20px;
+    color: rgba(0,0,0,.6);
 }
-.line2 {margin-top: 106px;}
-.line3 {margin-top: 84px;}
-
-.overlayTop {
-    margin-left: 10%;
-    width: 80%;
-    height: 0;
-    top: 0;
+.footer-item:hover {
+    text-decoration: underline;
+    color: rgba(0,0,0,.9);
 }
 
-.project-container:hover .project-overlay {
-    margin-top: 10%;
-    opacity: 1;
-    height: 80%;
-}
 
 /* /////////////// */
 /*       GRID      */
@@ -272,7 +259,7 @@ body {
 		--sixty-height: 288px;
 		--twenty-height: 96px;
     
-        --navHeightMobile: 250px;
+        --navHeightMobile: 200px;
     }   
     html {
         font-size: 125%;
@@ -297,7 +284,17 @@ body {
         height: var(--navHeightMobile);
         position: fixed;
         top: 0;
-        z-index: 5;
+        z-index: 3;
+        background-color: white;
+        border-bottom: 5px solid var(--gray-color);
+    }
+    .fa-bars {
+        color: black;
+        font-size: 4.5em;
+        float: right;
+        text-decoration: none;
+        margin-top: .65em;        
+        line-height: var(--navHeightMobile);
     }
     #nav {
         width: 90%;
@@ -312,23 +309,62 @@ body {
     }
     .nav-title {
         color: black;
-        font-size: 3em;
+        font-size: 3.2em;
         float: left;
         text-decoration: none;
         margin-bottom: 0px;
         font-weight: bold;
         text-align: center;
         line-height: var(--navHeightMobile);
+        margin-top: .11em;
+        width: 80%;
     }
-    .nav-menu {
+    #mobile-menu {
+    }
+    .menu-overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+        height: 0;
+        width: 100vw;
+        position: fixed; /* Stay in place */
+        z-index: 5; /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: white;
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: all .5s ease;
+      }
+    #mobile-menu-content {
+        position: relative;
+        top: 0; /* 25% from the top */
+        width: 100%; /* 100% width */
+        text-align: center; /* Centered text/links */
+        margin-top: 20%;
+    }
+    #mobile-menu-close {
+        position: relative;
+        top: 0; /* 25% from the top */
+        width: 100%; /* 100% width */
+        height: 10%;
+        text-align: center; /* Centered text/links */
+    }
+    #mobile-menu-content a, #mobile-menu-content p {
+        font-size: 3.5em;              
         color: black;
-        font-size: 3em;
+    }
+    #mobile-menu-close .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 18px;
+        font-size: 12em;
+        color: var(--gray-color);
         text-decoration: none;
-        margin-bottom: 0px;
-        font-weight: bold;
-        text-align: center;
-        line-height: var(--navHeightMobile);
-        float: right;
+    }
+    .fa-bars {
+        z-index: 7;
+    }
+    
+    .fa-bars:hover {
+        cursor: pointer;
     }
     #main {
         margin-top: var(--navHeightMobile);
@@ -340,6 +376,18 @@ body {
         width: 100%;
         padding: 0;
         display: block;
+    }
+    .project-content h1 {
+        padding-top: 100px;
+    }
+    .project-content p {
+        padding: 5%;
+    }
+    #footer {
+        height: 150px;
+    }
+    .footer-item {
+        font-size: 2em;
     }
     /* /////////////// */
     /*       GRID      */

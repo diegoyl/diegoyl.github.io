@@ -2,6 +2,12 @@ window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 }
 
+function openNav() {
+  document.getElementById("mobile-menu").style.height = "100vh";
+}
+function closeNav() {
+  document.getElementById("mobile-menu").style.height = "0";
+}
 
 var grt = "Hello!";
 var rand;
