@@ -1,0 +1,15 @@
+.u-centerText {
+    text-align: center;
+}
+.u-circleFrame {
+    border-radius: 50%;
+}
+
+/* FOR SMALL SCREENS */
+@media screen and (max-width:1024px){
+
+	/* HORIZONTAL SMALL SCREEN */
+    @media (orientation: landscape) {
+        
+      }
+}

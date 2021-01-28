@@ -6,8 +6,9 @@
     --lightblue-color: #8fefff;
     --pink-color: rgb(255, 144, 159);
     --scarlet-color: rgb(158, 16, 71);
-    --dark-gray-color: rgb(111, 112, 112);
+    --light-gray-color: rgb(226, 226, 226);
     --gray-color: rgb(198, 204, 204);
+    --dark-gray-color: rgb(129, 129, 129);
     --wrapper-width: 1000px;
     --main-col-width: auto;
     --sidebar-width: 140px;    
@@ -19,7 +20,7 @@
     --font4: 10px;
 
 
-    --containerWidth: 1400px;
+    --containerWidth: 1200px;
     --navMarginTop: 70px;
 }
   
@@ -39,7 +40,7 @@
     color: var(--gray-color);
 }
 
-body,p,h1,h2,h3,h4,h5,h6 {font-family: 'Epilogue', 'WorkxSans', serif; font-weight: 400;} /* change to sans-serif when readt */
+body,p,h1,h2,h3,h4,h5,h6, button, textarea {font-family: 'Epilogue', 'WorkxSans', serif; font-weight: 400;} /* change to sans-serif when readt */
 .extra-light{font-weight: 200;}
 .light{font-weight: 300;}
 .regular{font-weight: 400;}
@@ -79,22 +80,22 @@ body {
 }
 #nav-box {
     /* background-color: #ff8fcb7d; */
-    width: 20%;
-    max-width: 20vw;
+    width: 25%;
+    max-width: 25vw;
     height: auto;
     display: inline-block;
     vertical-align: top;
     position: sticky;
     top: var(--navMarginTop);
-    margin-top: calc(5% + var(--navMarginTop));
-    z-index: 3;
+    /* margin-top: calc(5% + var(--navMarginTop)); */
+    margin-top: var(--navMarginTop);
+    z-index: 3;    
 }
 #nav {
-    /* background-color: #8feeff4b; */
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
     display: block;
     text-align: left;
+    padding-left: 10%;
 }
 #nav-box-mobile {
     display: none;
@@ -113,18 +114,29 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 1em;
+    transition: all .2s ease;
 }
 .nav-item {
     color: var(--dark-gray-color);
     font-size: 1.2em;
     display: block;
     text-decoration: none;
-    height: 2em;
+    /* height: 2em; */
+    padding: .3em 0 ;
     text-align: center;
+    transition: all .3s ease;
 } 
 #nav a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: black;
+    text-shadow: 2px 2px 1px var(--light-gray-color);
+
+}
+#nav .nav-title:hover {
+    text-decoration: none;
+    /* color: var(--blue-color); */
+    /* font-weight: 900; */
+    text-shadow: 3px 3px 1px var(--light-gray-color);
 }
 .nav-subtitle {
     margin: 0;
@@ -132,8 +144,8 @@ body {
 }  
 
 #main {
-    width: 78%;
-    max-width: 78vw;
+    width: 73%;
+    max-width: 73vw;
     height: auto;
     display: inline-block;
     vertical-align: top;
@@ -147,6 +159,8 @@ body {
 }
 .project-content p {
     font-size: 1.2em; 
+    padding: 0 5em;
+    line-height: 1.25em;
 }
 .project-content img {
     display: block;
@@ -172,7 +186,50 @@ body {
     color: rgba(0,0,0,.9);
 }
 
-
+#email {
+    /* color: var(--blue-color); */
+    font-weight: 700;
+}
+#form {
+    width: 60%;
+    margin: 2em auto;
+}
+#form label {
+    display: block;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+#form p {
+    margin: .2em 0;
+}
+#form textarea, input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--light-gray-color);
+    border-radius: .1em;
+    font-size: .8em;
+    margin-bottom: .5em;
+    padding: .5em .5em;
+}
+#form textarea {
+    height: 5em;
+}
+#form button {
+    display: block;
+    padding: .6em 1.2em;
+    /* width: 7em;
+    height: 3em; */
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: .2em;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-weight: 500;
+}
 /* /////////////// */
 /*       GRID      */
 /* /////////////// */
@@ -180,6 +237,7 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 0;
+    margin-top: 2em;
 }
 #grid-div {
       background:var(--gray-color);
@@ -250,6 +308,7 @@ body {
 }
 
 
+
 /* FOR SMALL SCREENS */
 @media screen and (max-width:1024px){
 	:root {
@@ -262,7 +321,7 @@ body {
         --navHeightMobile: 200px;
     }   
     html {
-        font-size: 125%;
+        font-size: 170%;
         margin: 0;
         padding: 0;
     }
@@ -290,7 +349,7 @@ body {
     }
     .fa-bars {
         color: black;
-        font-size: 4.5em;
+        font-size: 3.3em;
         float: right;
         text-decoration: none;
         margin-top: .65em;        
@@ -302,6 +361,7 @@ body {
         margin: 0 5%;
         display: block;
         text-align: left;
+        padding: 0;
     }
     #avatar {
         width: 100%;
@@ -309,7 +369,7 @@ body {
     }
     .nav-title {
         color: black;
-        font-size: 3.2em;
+        font-size: 2.4em;
         float: left;
         text-decoration: none;
         margin-bottom: 0px;
@@ -348,7 +408,7 @@ body {
         text-align: center; /* Centered text/links */
     }
     #mobile-menu-content a, #mobile-menu-content p {
-        font-size: 3.5em;              
+        font-size: 3em;              
         color: black;
     }
     #mobile-menu-close .closebtn {
@@ -361,9 +421,6 @@ body {
     }
     .fa-bars {
         z-index: 7;
-    }
-    
-    .fa-bars:hover {
         cursor: pointer;
     }
     #main {
@@ -389,12 +446,37 @@ body {
     .footer-item {
         font-size: 2em;
     }
+
+        
+    #form {
+        width: 85%;
+    }
+    #form label {
+        font-size: 2em;
+    }
+    #form textarea, input, #message {
+        border-radius: .1em;
+        font-size: .8em;
+        margin-bottom: .5em;
+        padding: .5em .5em;
+    }
+    #form textarea {
+        height: 5em;
+    }
+    #form button {
+        display: block;
+        padding: .6em 1.2em;
+        border-radius: .2em;
+        font-size: 1.8em;
+    }
+
     /* /////////////// */
     /*       GRID      */
     /* /////////////// */
     .grid {
+        margin-top: 0em;
         /* delete this vvv to make them 2 imgs per row */
-        /* grid-template-columns: 100%;  */
+        grid-template-columns: 100%;
     }
     #grid-div {
         padding: 0;

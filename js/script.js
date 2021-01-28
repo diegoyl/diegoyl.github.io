@@ -9,6 +9,71 @@ function closeNav() {
   document.getElementById("mobile-menu").style.height = "0";
 }
 
+var footer = true;
+function init () {
+  activeTab();
+  var windowHeight = window.innerHeight;
+  var contentHeight = document.getElementById("main-container").clientHeight;
+  
+  if (contentHeight < windowHeight) {
+    console.log("remove FOOTER:");
+    document.getElementById("footer-box").style.display = "none";
+    footer = false;
+  }
+}
+
+window.onresize = toggleFooter;
+
+function toggleFooter () {  
+  console.log("resizing");
+
+  var windowHeight = window.innerHeight;
+  var contentHeight = document.getElementById("main-container").clientHeight;
+  
+  if (footer && contentHeight < windowHeight) {
+    console.log("remove FOOTER:");
+    document.getElementById("footer-box").style.display = "none";
+    footer = false;
+  } else if (footer == false && contentHeight > windowHeight) {
+    console.log("ADD FOOTER:");
+    document.getElementById("footer-box").style.display = "block";
+    footer = true;
+  }
+}
+
+
+function activeTab() {
+    console.log("getting name:");
+    var fileName = location.href.split("/").slice(-1); 
+  console.log(fileName[0]);
+  // HIGHLIGHTS ACTIVE PAGE IN THE NAVIGATION    
+  // var title = document.getElementsByTagName("title")[0].innerHTML;
+
+  // if (title == "B2 - about") { 
+  //     document.getElementById('sb-about').classList = "active";
+  // } else if (title == "B2 - people") {
+  //     document.getElementById('sb-people').classList = "active";
+  // } else if (title == "B2 - suites") { 
+  //     document.getElementById('sb-suites').classList = "active";
+  // } else if (title == "B2 - events") {
+  //     document.getElementById('sb-events').classList = "active";
+  // } else if (title == "B2 - kosher") {
+  //     document.getElementById('sb-kosher').classList = "active";
+  // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 var grt = "Hello!";
 var rand;
 
