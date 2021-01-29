@@ -155,10 +155,32 @@ h1 {
 h2 {
     margin-top: 0px;
     color: var(--dark-gray-color);
-    font-size: 1.5em;
+    font-size: 1.4em;
+    line-height: 1.2em;
     text-align: center;
     padding: 0 5em;
     margin-bottom: 3em;
+}
+h3 {
+    margin-top: 0px;
+    color: var(--dark-gray-color);
+    line-height: 1.5em;
+    font-size: 1em;
+    text-align: center;
+    padding: 0 5em;
+    margin-top: 3em;
+}
+
+.half-div-left,.half-div-right {
+    display: inline-block;
+    width: 47.5%;
+    vertical-align: top;
+}
+.half-div-left {
+    padding-right: 2%;
+}
+.half-div-right {
+    padding-left: 2%;
 }
 
 .project-content p {
@@ -238,6 +260,14 @@ h2 {
     cursor: pointer;
     font-weight: 500;
 }
+#uni {
+    color: inherit;
+    font-weight: 500;
+}
+#uni:hover {
+    color: rgb(0, 95, 0);
+}
+
 /* /////////////// */
 /*       GRID      */
 /* /////////////// */
