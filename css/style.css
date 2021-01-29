@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;600;700;900&display=swap');
 :root {
     --main-color: rgb(252, 101, 113);
     --blue-color: #2294c2;
@@ -53,19 +53,6 @@ body,p,h1,h2,h3,h4,h5,h6, button, textarea {font-family: 'Epilogue', 'WorkxSans'
 .font2{font-size: var(--font2);}
 .font3{font-size: var(--font3);}
 .font4{font-size: var(--font4);}
-h1 {
-    font-weight: 500;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 10px;
-}
-h2 {
-    margin-top: 0px;
-    color: var(--gray-color);
-    font-size: 1.5em;
-    text-align: center;
-}
 html { font-size: 100%; } /*16px*/
 
 body {
@@ -122,21 +109,21 @@ body {
     display: block;
     text-decoration: none;
     /* height: 2em; */
-    padding: .3em 0 ;
+    padding: .3em 0;
     text-align: center;
     transition: all .3s ease;
 } 
 #nav a:hover {
     /* text-decoration: underline; */
     color: black;
-    text-shadow: 2px 2px 1px var(--light-gray-color);
+    /* text-shadow: 2px 2px 1px var(--light-gray-color); */
 
 }
 #nav .nav-title:hover {
     text-decoration: none;
-    /* color: var(--blue-color); */
+    color: var(--blue-color);
     /* font-weight: 900; */
-    text-shadow: 3px 3px 1px var(--light-gray-color);
+    /* text-shadow: 3px 3px 1px var(--light-gray-color); */
 }
 .nav-subtitle {
     margin: 0;
@@ -157,14 +144,35 @@ body {
     display: inline-block;
     vertical-align: top;
 }
-.project-content p {
-    font-size: 1.2em; 
+
+h1 {
+    font-weight: 500;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+h2 {
+    margin-top: 0px;
+    color: var(--dark-gray-color);
+    font-size: 1.5em;
+    text-align: center;
     padding: 0 5em;
+    margin-bottom: 3em;
+}
+
+.project-content p {
+    color: black;
+    font-size: 1.2em;
+    padding: 0;
     line-height: 1.25em;
+    text-align: left;
+    margin: .2em 0;
 }
 .project-content img {
     display: block;
     width: 100%;
+    margin: 0 0 2em;
 }
 
 #footer {
@@ -177,7 +185,7 @@ body {
     text-decoration: none;
     color: black;
     line-height: 0em;
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 500;
     color: rgba(0,0,0,.6);
 }
@@ -310,7 +318,7 @@ body {
 
 
 /* FOR SMALL SCREENS */
-@media screen and (max-width:1024px){
+@media screen and (max-width:1024px) and (orientation: portrait){
 	:root {
 		--full-height: 480px;
 		--half-height: 240px;
@@ -414,8 +422,8 @@ body {
     #mobile-menu-close .closebtn {
         position: absolute;
         top: 0px;
-        right: 18px;
-        font-size: 12em;
+        right: 15px;
+        font-size: 10em;
         color: var(--gray-color);
         text-decoration: none;
     }

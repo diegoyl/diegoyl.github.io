@@ -5,6 +5,23 @@
     border-radius: 50%;
 }
 
+.imgRow2, .imgRow3, .imgRow4, .imgRow5 {
+    margin: auto;
+}
+.imgRow3 img {
+    width: 31%;
+    margin: 0 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+.imgRow4 img {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+strong {
+    font-weight: 600;
+}
 /* FOR SMALL SCREENS */
 @media screen and (max-width:1024px){
 
