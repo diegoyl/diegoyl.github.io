@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;600;700;900&display=swap');
+@font-face {
+    font-family: "Anybody";
+    src: url('../fonts/Anybody-master/fonts/variable/Anybody[slnt\,wdth\,wght].ttf') format("truetype-variations");
+    font-weight: 1 999;
+    font-stretch: 50% 200%;
+}
+
+/* @font-face {
+    font-family: "AnybodyCondensedLight";
+    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedLight.woff);
+}
+@font-face {
+    font-family: "AnybodyCondensedMedium";
+    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedMedium.woff);
+}
+@font-face {
+    font-family: "AnybodyCondensedRegular";
+    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedRegular.woff);
+}
+@font-face {
+    font-family: "Anybody";
+    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-Light.woff);
+} */
 :root {
     --orange-color: rgb(255, 111, 59);
-    --hover-box-color: rgba(255, 111, 59, .95);
+    --hover-box-color: rgba(255, 255, 255, 0.9);
     --blue-color: #2294c2;
     --blue-color-tr: rgba(0, 173, 241, 0.75);
     --lightblue-color: #8fefff;
     --light-gray-color: rgb(226, 226, 226);
     --gray-color: rgb(198, 204, 204);
-    --dark-gray-color: rgb(129, 129, 129);
+    --dark-gray-color: rgb(143, 143, 143);
     --wrapper-width: 1000px;
     --main-col-width: auto;
     --sidebar-width: 140px;    
@@ -39,15 +61,8 @@
     color: var(--gray-color);
 }
 
-body,p,h1,h2,h3,h4,h5,h6, button, textarea {font-family: 'Epilogue', 'WorkxSans', serif; font-weight: 400;} /* change to sans-serif when readt */
-.extra-light{font-weight: 200;}
-.light{font-weight: 300;}
-.regular{font-weight: 400;}
-.medium{font-weight: 500;}
-.semi-bold {font-weight: 600;}
-.bold{font-weight: 700;}
-.extra-bold{font-weight: 800;}
-.black{font-weight: 900;}
+body,p,h1,h2,h3,h4,h5,h6, button, textarea {font-family: 'Anybody', 'Epilogue', serif; font-weight: 400;} /* change to sans-serif when readt */
+
 .font1{font-size: var(--font1);}
 .font2{font-size: var(--font2);}
 .font3{font-size: var(--font3);}
@@ -93,42 +108,23 @@ body {
 }
 .nav-title {
     color: black;
-    font-size: 1.8em;
     display: block;
     text-decoration: none;
     margin-bottom: 30px;
-    font-weight: bold;
     text-align: center;
     line-height: 1em;
-    transition: all .2s ease;
+    transition: color .2s ease;
 }
 .nav-item {
     color: var(--dark-gray-color);
-    font-size: 1.2em;
     display: block;
-    text-decoration: none;
-    /* height: 2em; */
     padding: .3em 0;
     text-align: center;
     transition: all .2s ease;
 } 
-.activeNav {
-    color: black;
-    font-weight: 600;
-}
-#nav a:hover {
-    color: black;
-    /* font-style: italic; */
-    text-decoration: underline;
-}
-#nav .nav-title:hover {
-    text-decoration: none;
-    color: var(--orange-color);
-    font-style: normal;
-}
+#nav a:hover {color: black;}
 .nav-subtitle {
     margin: 0;
-    font-weight: 500;
 }  
 
 #main {
@@ -147,16 +143,13 @@ body {
 }
 
 h1 {
-    font-weight: 500;
-    font-size: 3em;
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 10px;
+    margin-top: .8em;
+    margin-bottom: -.08em;
 }
 h2 {
     margin-top: 0px;
     color: var(--dark-gray-color);
-    font-size: 1.4em;
     line-height: 1.2em;
     text-align: center;
     padding: 0 5em;
@@ -166,7 +159,6 @@ h3 {
     margin-top: 0px;
     color: var(--dark-gray-color);
     line-height: 1.5em;
-    font-size: 1em;
     text-align: center;
     padding: 0 5em;
     margin-top: 3em;
@@ -186,9 +178,7 @@ h3 {
 
 .project-content p {
     color: black;
-    font-size: 1.2em;
     padding: 0;
-    line-height: 1.25em;
     text-align: left;
     margin: .2em 0;
 }
@@ -209,13 +199,9 @@ h3 {
 .footer-item {
     text-decoration: none;
     color: black;
-    line-height: 0em;
-    font-size: 0.8em;
-    font-weight: 500;
-    color: rgba(0,0,0,.6);
+    color: var(--dark-gray-color);
 }
 .footer-item:hover {
-    text-decoration: underline;
     color: rgba(0,0,0,.9);
 }
 
@@ -335,12 +321,11 @@ h3 {
     left: 10%;
     margin: auto;
     margin: 0;
-    padding: 5%;
+    padding: 4%;
 
     text-align: center;
     text-decoration: none;
     color: black;
-    font-size: 3em;
     transition: all .3s ease;
 }
 .grid a:hover {
@@ -348,7 +333,6 @@ h3 {
 }
 .grid p {
     display: table-cell; 
-    font-weight: 500;
     vertical-align: middle;
 }
 .text-overlay {
@@ -372,13 +356,11 @@ h3 {
         --navHeightMobile: 200px;
     }   
     html {
-        font-size: 170%;
         margin: 0;
         padding: 0;
     }
         
     h3 {
-        font-size: .5em;
         margin: 10em auto;
     }
     #container {
@@ -423,16 +405,10 @@ h3 {
         border-radius: 50%;
     }
     .nav-title {
-        color: black;
-        font-size: 2.4em;
-        float: left;
-        text-decoration: none;
         margin-bottom: 0px;
-        font-weight: bold;
-        text-align: center;
+        margin-top: .1em;     
+        float: left;
         line-height: var(--navHeightMobile);
-        margin-top: .11em;
-        width: 80%;
     }
     #mobile-menu {
     }
@@ -462,15 +438,13 @@ h3 {
         height: 10%;
         text-align: center; /* Centered text/links */
     }
-    #mobile-menu-content a, #mobile-menu-content p {
-        font-size: 3em;              
+    #mobile-menu-content a, #mobile-menu-content p {           
         color: black;
     }
     #mobile-menu-close .closebtn {
         position: absolute;
-        top: 0px;
-        right: 15px;
-        font-size: 10em;
+        top: -.31em;
+        right: .1em;
         color: var(--gray-color);
         text-decoration: none;
     }
@@ -494,6 +468,7 @@ h3 {
     }
     .project-content p {
         padding: 5%;
+        line-height: 3em;
     }
     
     
@@ -501,17 +476,10 @@ h3 {
         height: 4.4em;
         margin: 5em 0;
     }
-    .footer-item {
-        font-size: 2em;
-        line-height: 2em;
-    }
 
         
     #form {
         width: 85%;
-    }
-    #form label {
-        font-size: 2em;
     }
     #form textarea, input, #message {
         border-radius: .1em;
@@ -568,8 +536,15 @@ h3 {
             left: 50%;
             transform: translate(-50%, -50%); */
     }
-
-    
+    .half-div-left, .half-div-right {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    #prof {
+        width: 60%;
+        margin: auto;
+    }
 	/* HORIZONTAL SMALL SCREEN */
     @media (orientation: landscape) {
         
