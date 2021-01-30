@@ -16,7 +16,6 @@ function init () {
   var contentHeight = document.getElementById("main-container").clientHeight;
   
   if (contentHeight < windowHeight) {
-    console.log("remove FOOTER:");
     document.getElementById("footer-box").style.display = "none";
     footer = false;
   }
@@ -24,42 +23,46 @@ function init () {
 
 window.onresize = toggleFooter;
 
-function toggleFooter () {  
-  console.log("resizing");
-
+function toggleFooter () { 
   var windowHeight = window.innerHeight;
   var contentHeight = document.getElementById("main-container").clientHeight;
   
   if (footer && contentHeight < windowHeight) {
-    console.log("remove FOOTER:");
     document.getElementById("footer-box").style.display = "none";
     footer = false;
   } else if (footer == false && contentHeight > windowHeight) {
-    console.log("ADD FOOTER:");
     document.getElementById("footer-box").style.display = "block";
     footer = true;
   }
 }
 
-
+var title;
 function activeTab() {
-    console.log("getting name:");
-    var fileName = location.href.split("/").slice(-1); 
-  console.log(fileName[0]);
-  // HIGHLIGHTS ACTIVE PAGE IN THE NAVIGATION    
-  // var title = document.getElementsByTagName("title")[0].innerHTML;
-
-  // if (title == "B2 - about") { 
-  //     document.getElementById('sb-about').classList = "active";
-  // } else if (title == "B2 - people") {
-  //     document.getElementById('sb-people').classList = "active";
-  // } else if (title == "B2 - suites") { 
-  //     document.getElementById('sb-suites').classList = "active";
-  // } else if (title == "B2 - events") {
-  //     document.getElementById('sb-events').classList = "active";
-  // } else if (title == "B2 - kosher") {
-  //     document.getElementById('sb-kosher').classList = "active";
-  // }
+    var names = location.href.split("/"); 
+    for (i=0; i < names.length; i++) {
+      let n = names[i];
+      if (n.includes("physical")) {
+        document.getElementById('nav-physical').classList.add("activeNav");
+        document.getElementById('mob-nav-physical').classList.add("activeNav");
+        break
+      } else if (n.includes("digital")) {
+        document.getElementById('nav-digital').classList.add("activeNav");
+        document.getElementById('mob-nav-digital').classList.add("activeNav");
+        break
+      } else if (n.includes("personal")) {
+        document.getElementById('nav-personal').classList.add("activeNav");
+        document.getElementById('mob-nav-personal').classList.add("activeNav");
+        break
+      } else if (n.includes("about")) {
+        document.getElementById('nav-about').classList.add("activeNav");
+        document.getElementById('mob-nav-about').classList.add("activeNav");
+        break
+      } else if (n.includes("contact")) {
+        document.getElementById('nav-contact').classList.add("activeNav");
+        document.getElementById('mob-nav-contact').classList.add("activeNav");
+        break
+      }    
+    }
 }
 
 

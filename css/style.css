@@ -112,9 +112,14 @@ body {
     text-align: center;
     transition: all .2s ease;
 } 
+.activeNav {
+    color: black;
+    font-weight: 600;
+}
 #nav a:hover {
     color: black;
-    font-style: italic;
+    /* font-style: italic; */
+    text-decoration: underline;
 }
 #nav .nav-title:hover {
     text-decoration: none;
@@ -372,6 +377,10 @@ h3 {
         padding: 0;
     }
         
+    h3 {
+        font-size: .5em;
+        margin: 10em auto;
+    }
     #container {
         width: 100%;
         max-width: 100%;
@@ -487,11 +496,14 @@ h3 {
         padding: 5%;
     }
     
+    
     #footer {
-        height: 150px;
+        height: 4.4em;
+        margin: 5em 0;
     }
     .footer-item {
         font-size: 2em;
+        line-height: 2em;
     }
 
         
