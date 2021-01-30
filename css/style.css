@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;600;700;900&display=swap');
 :root {
-    --main-color: rgb(252, 101, 113);
+    --orange-color: rgb(255, 111, 59);
+    --hover-box-color: rgba(255, 111, 59, .95);
     --blue-color: #2294c2;
     --blue-color-tr: rgba(0, 173, 241, 0.75);
     --lightblue-color: #8fefff;
-    --pink-color: rgb(255, 144, 159);
-    --scarlet-color: rgb(158, 16, 71);
     --light-gray-color: rgb(226, 226, 226);
     --gray-color: rgb(198, 204, 204);
     --dark-gray-color: rgb(129, 129, 129);
@@ -119,7 +118,7 @@ body {
 }
 #nav .nav-title:hover {
     text-decoration: none;
-    color: var(--blue-color);
+    color: var(--orange-color);
     font-style: normal;
 }
 .nav-subtitle {
@@ -216,7 +215,7 @@ h3 {
 }
 
 #email {
-    /* color: var(--blue-color); */
+    color: var(--orange-color);
     font-weight: 700;
 }
 #form {
@@ -247,17 +246,18 @@ h3 {
 }
 #form button {
     display: block;
-    padding: .6em 1.2em;
-    /* width: 7em;
-    height: 3em; */
+    border-radius: .3em;
+    font-size: 1.4em;
+    padding: .6em 1.2em .4em;
     outline: none;
     border: none;
     background-color: black;
     color: white;
-    border-radius: .2em;
-    font-size: 1.4em;
     cursor: pointer;
     font-weight: 500;
+}
+#form button:hover {
+    background-color: var(--orange-color);
 }
 #uni {
     color: inherit;
@@ -319,7 +319,7 @@ h3 {
 }
 .grid a {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--hover-box-color);
     /* mix-blend-mode: lighten; */
     opacity: 0;
 
