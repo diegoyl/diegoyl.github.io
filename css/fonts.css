@@ -107,7 +107,7 @@ strong, .strong {
     font-stretch: var(--LessCondensed);
 }
 
-s
+
 /* FOR SMALL SCREENS */
 @media screen and (max-width:1024px) and (orientation: portrait){
     html {
