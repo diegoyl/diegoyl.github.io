@@ -4,42 +4,17 @@
     font-weight: 1 999;
     font-stretch: 50% 200%;
 }
-
-/* @font-face {
-    font-family: "AnybodyCondensedLight";
-    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedLight.woff);
-}
-@font-face {
-    font-family: "AnybodyCondensedMedium";
-    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedMedium.woff);
-}
-@font-face {
-    font-family: "AnybodyCondensedRegular";
-    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-CondensedRegular.woff);
-}
-@font-face {
-    font-family: "Anybody";
-    src: url(../fonts/Anybody-master/fonts/web/woff/Anybody-Light.woff);
-} */
 :root {
     --orange-color: rgb(255, 111, 59);
     --hover-box-color: rgba(255, 255, 255, 0.9);
     --blue-color: #2294c2;
-    --blue-color-tr: rgba(0, 173, 241, 0.75);
-    --lightblue-color: #8fefff;
     --light-gray-color: rgb(226, 226, 226);
     --gray-color: rgb(198, 204, 204);
     --dark-gray-color: rgb(143, 143, 143);
-    --wrapper-width: 1000px;
-    --main-col-width: auto;
-    --sidebar-width: 140px;    
-    --top-bar-heigth: 80px;
-    --project-dim: 300px;
     --font1: 40px;
     --font2: 36px;
     --font3: 24px;
     --font4: 10px;
-
 
     --containerWidth: 1200px;
     --navMarginTop: 70px;
@@ -88,7 +63,6 @@ body {
     vertical-align: top;
     position: sticky;
     top: var(--navMarginTop);
-    /* margin-top: calc(5% + var(--navMarginTop)); */
     margin-top: var(--navMarginTop);
     z-index: 3;    
 }
@@ -380,7 +354,8 @@ h3 {
         top: 0;
         z-index: 3;
         background-color: white;
-        border-bottom: 5px solid var(--gray-color);
+        /* border-bottom: 5px solid var(--gray-color); */
+        box-shadow: 0px 16px 40px rgba(0,0,0,.1) ;
     }
     .fa-bars {
         color: black;

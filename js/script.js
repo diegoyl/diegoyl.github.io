@@ -9,6 +9,7 @@ function closeNav() {
   document.getElementById("mobile-menu").style.height = "0";
 }
 
+// var navHeight;
 var footer = true;
 function init () {
   activeTab();
@@ -19,10 +20,10 @@ function init () {
     document.getElementById("footer-box").style.display = "none";
     footer = false;
   }
+  // navHeight = document.getElementById("nav-box-mobile").clientHeight;
 }
 
 window.onresize = toggleFooter;
-
 function toggleFooter () { 
   var windowHeight = window.innerHeight;
   var contentHeight = document.getElementById("main-container").clientHeight;
@@ -65,6 +66,22 @@ function activeTab() {
     }
 }
 
+// window.onscroll = function() {scrollFunction()};
+// function scrollFunction() {
+//   var smallHeight = "180px"
+//   if (document.body.scrollTop > navHeight || document.documentElement.scrollTop > navHeight) {
+//     document.getElementById("nav-box-mobile").style.height = smallHeight;
+//     document.getElementById("nav-box-mobile").style.marginTop = "-1.7em";
+//     document.getElementById("nav-box-mobile").style.lineHeight = smallHeight;
+//     console.log("smalling nav")
+//     // document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+//     document.getElementById("nav-box-mobile").style.height = navHeight+"px";
+//     document.getElementById("nav-box-mobile").style.marginTop = "0";
+//     document.getElementById("nav-box-mobile").style.lineHeight = navHeight+"px";
+//     // document.getElementById("logo").style.fontSize = "35px";
+//   }
+// }
 
 
 
