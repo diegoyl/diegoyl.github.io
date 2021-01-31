@@ -11,6 +11,7 @@
     --Thin: 200;
     --Light: 350;
     --Regular: 410;
+    --tinyBitMore: 470;
     --Bold: 500;
     --Bold4Title: 550;
     --Black: 570;
@@ -61,7 +62,11 @@ p a {
 }
 #nav a:hover {
     color: black;
-    font-stretch: 95%;
+    font-stretch: 88%;
+    font-weight: var(--tinyBitMore);
+}
+#nav a:active {
+    transform: scale(0.9);
 }
 #nav .nav-title {
     font-weight: var(--Bold4Title);

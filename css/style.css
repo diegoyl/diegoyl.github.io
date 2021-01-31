@@ -303,6 +303,10 @@ h3 {
 .grid a:hover {
     opacity: 1;
 }
+
+.grid a:active {
+    transform: scale(0.9);
+}
 .grid p {
     display: table-cell; 
     vertical-align: middle;
