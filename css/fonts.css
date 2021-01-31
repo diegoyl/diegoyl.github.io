@@ -43,6 +43,9 @@ h3 {
     line-height: 1.5em;
 }
 
+p a {
+    font-weight: var(--Bold);
+}
 .nav-item {
     font-weight: var(--Regular);
     font-stretch: var(--LessCondensed);
@@ -83,7 +86,7 @@ h3 {
     line-height: 0em;
 }
 .footer-item:hover {
-    font-weight:60;
+    font-weight:610;
 }
 .grid a {    
     font-stretch: var(--UltraCondensed);

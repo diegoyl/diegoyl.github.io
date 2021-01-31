@@ -92,6 +92,13 @@ body {
     margin-top: var(--navMarginTop);
     z-index: 3;    
 }
+p a, h2 a {
+    text-decoration: underline;
+    color: inherit;
+}
+/* p a:hover, h2 a:hover {
+    text-decoration: underline;
+} */
 #nav {
     width: 100%;
     display: block;
@@ -103,7 +110,6 @@ body {
 }
 #avatar {
     width: 100%;
-    /* padding: 0 10%; */
     border-radius: 50%;
 }
 .nav-title {
@@ -250,18 +256,10 @@ h3 {
 #form button:hover {
     background-color: var(--orange-color);
 }
-#uni {
-    color: inherit;
-    font-weight: 500;
-}
 #uni:hover {
     color: rgb(0, 95, 0);
 }
-#b2 {
-    color: rgb(44, 196, 188);
-    color: rgb(158, 16, 71); 
-    font-weight: 500;
-}
+#b2:hover{color: rgb(158, 16, 71);}
 #dwgs img{
     margin-bottom: 0;
     margin-top: 5em;
