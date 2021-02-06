@@ -305,7 +305,7 @@ h3 {
 }
 
 .grid a:active {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 .grid p {
     display: table-cell; 
