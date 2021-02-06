@@ -12,7 +12,6 @@ function closeNav() {
 // var navHeight;
 var footer = true;
 function init () {
-  activeTab();
   var windowHeight = window.innerHeight;
   var contentHeight = document.getElementById("main-container").clientHeight;
   
@@ -20,6 +19,12 @@ function init () {
     document.getElementById("footer-box").style.display = "none";
     footer = false;
   }
+  
+  $(document).ready( function () {
+    console.log("window ready");
+    activeTab();
+  });
+
   // navHeight = document.getElementById("nav-box-mobile").clientHeight;
 }
 
