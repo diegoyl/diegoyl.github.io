@@ -101,6 +101,17 @@ p a {
     font-weight: var(--Black);
 }
 
+.dark-grayColor {
+    color: var(--dark-gray-color);
+}
+.orangeColor {
+    color: var(--orange-color);
+    text-decoration: underline;
+}
+.grayColor {
+    color: var(--gray-color);
+}
+
 
 /* PRIORITY */
 .u-tightText {

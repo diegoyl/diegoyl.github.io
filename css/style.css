@@ -20,21 +20,6 @@
     --navMarginTop: 70px;
 }
   
-.tealColor {
-    color: var(--teal-color);
-}
-.greenColor {
-    color: var(--green-color);
-}
-.redColor {
-    color: var(--red-color);
-}
-.scarletColor {
-    color: var(--scarlet-color);
-}
-.grayColor {
-    color: var(--gray-color);
-}
 
 body,p,h1,h2,h3,h4,h5,h6, button, textarea {font-family: 'Anybody', 'Epilogue', serif; font-weight: 400;} /* change to sans-serif when readt */
 
@@ -162,7 +147,7 @@ h3 {
     text-align: left;
     margin: .2em 0;
 }
-.project-content img, video {
+.project-content img, video, iframe {
     display: block;
     width: 100%;
     margin: 0 0 2em;
@@ -234,6 +219,9 @@ h3 {
     color: rgb(0, 95, 0);
 }
 #b2:hover{color: rgb(158, 16, 71);}
+
+#yt-link {color: var(--dark-gray-color); margin-top: -1.5em; margin-bottom:1em; text-align: right; display: block;}
+#yt-link:hover {color: rgb(255, 161, 169)}
 #dwgs img{
     margin-bottom: 0;
     margin-top: 5em;
@@ -317,7 +305,6 @@ h3 {
     width: 100%;
     overflow: hidden;
 }
-
 
 
 /* FOR SMALL SCREENS */
